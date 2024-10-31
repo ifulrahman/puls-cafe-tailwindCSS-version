@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Pul's Cafe</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        scroll-behavior: smooth;
+    }
+
+    .parallax {
+        background-image: url('images/menu-header-2.jpg');
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .transparent {
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    .solid {
+        background-color: white;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    }
+
+    .name {
+        font-family: 'Pacifico', cursive;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .grid-container {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 200px);
+    }
+
+    .grid-item-1 {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .grid-item {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+
+    .grid-item img {
+        transition: transform 0.5s ease, filter 0.5s ease;
+    }
+    
+    .grid-item:hover img {
+        transform: scale(1.1);
+        filter: brightness(70%);
+    }
+
+</style>
+<body class="bg-white font-poppins">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 z-50 w-full bg-white transparent">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img class="w-12 h-12" src="images/logo.png" alt="Logo">
+                    <span class="ml-2 font-semibold text-gray-700 text-md">Pul's Cafe</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-baseline ml-10 space-x-4">
+                        <a href="index.html" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-yellow-600">Back to Home</a>
+                    </div>
+                </div>
+                <div class="flex -mr-2 md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 text-gray-700 rounded-md hover:text-yellow-600 focus:outline-none">
+                        <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-yellow-600">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="flex items-center justify-center parallax">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-bold">Order</h1>
+            <h2 class="mt-2 mb-6 text-sm italic text-center">"Hidangan Penuh Kenikmatan yang Siap Memenuhi Kebutuhan Anda"</h2>
+            <a href="#about" class="inline-block px-6 py-3 mt-4 font-bold text-white transition duration-300 bg-yellow-600 rounded-lg hover:bg-gray-900">Begin</a>
+        </div>
+    </header>
+    
+
+    <!-- Highlights -->
+    <section class="container p-6 mx-auto" id="about">
+        <div class="flex flex-col items-center p-4 rounded-lg lg:flex-row">
+            <div class="p-4 ml-0 lg:w-1/2 lg:ml-36">
+                <h2 class="mb-4 text-3xl font-bold">Enjoy Your Favorite Delicious Food</h2>
+                <p class="mb-4 text-gray-600">Rasakan Kenikmatan Hidangan Favorit Anda yang Lezat dan Menggugah Selera
+                    Nikmati Sensasi Rasa yang Menghadirkan Kelezatan Sempurna di Setiap Gigitan.
+                    Pesan Sekarang dan Jadikan Setiap Makan Anda Momen yang Tak Terlupakan</p>
+                <a href="#menu" class="inline-block px-6 py-2 text-white bg-yellow-600 rounded-full">SEE OUR MENU</a>
+            </div>
+            <div class="p-4 lg:w-1/2">
+                <img src="images/noodle.png" alt="Delicious Food" class="w-full rounded-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Favorite Menu -->
+    <div class="container p-6 pt-24 pb-24 mx-auto bg-gradient-to-br from-gray-100 to-orange-100" id="menu">
+        <h1 class="mb-8 text-3xl font-bold text-center text-yellow-600" style="font-family: 'Patrick Hand', cursive;">Favorite Menu</h1>
+        <div class="grid grid-cols-1 gap-4 mx-4 sm:grid-cols-2 md:grid-cols-3 sm:mx-8 md:mx-40">
+            <div class="relative flex flex-col items-center p-4 transition duration-300 rounded-lg">
+                <img src="images/promo-3.png" alt="Nasi Goreng" class="w-[290px] mb-4 transition duration-300 transform rounded-lg hover:scale-105">
+                <h2 class="mb-2 text-xl font-bold name">Ayam Panggang</h2>
+                <p class="text-gray-500 line-through">Rp125.000</p>
+                <p class="font-bold text-red-500">Rp55.000</p>
+                <button class="px-4 py-2 mt-2 font-semibold text-white bg-yellow-600 rounded-3xl hover:bg-yellow-700">Order</button>
+            </div>
+            <div class="flex flex-col items-center p-4 transition duration-300 rounded-lg">
+                <img src="images/breakfast-1.png" alt="Nasi Goreng" class="w-[290px] mb-4 transition duration-300 transform rounded-lg hover:scale-105">
+                <h2 class="mb-2 text-xl font-bold name">Mie Kawat</h2>
+                <p class="font-bold text-red-500">Rp27.000</p>
+                <button class="px-4 py-2 mt-2 font-semibold text-white bg-yellow-600 rounded-3xl hover:bg-yellow-700">Order</button>
+            </div>
+            <div class="flex flex-col items-center p-4 transition duration-300 rounded-lg">
+                <img src="images/breakfast-2.png" alt="Nasi Goreng" class="w-[290px] mb-4 transition duration-300 transform rounded-lg hover:scale-105">
+                <h2 class="mb-2 text-xl font-bold name">Omelette</h2>
+                <p class="font-bold text-red-500">Rp25.000</p>
+                <button class="px-4 py-2 mt-2 font-semibold text-white bg-yellow-600 rounded-3xl hover:bg-yellow-700">Order</button>
+            </div>
+            <div class="flex flex-col items-center p-4 transition duration-300 rounded-lg">
+                <img src="images/breakfast-3.png" alt="Nasi Goreng" class="w-[290px] mb-4 transition duration-300 transform rounded-lg hover:scale-105">
+                <h2 class="mb-2 text-xl font-bold name">Mie Goreng</h2>
+                <p class="font-bold text-red-500">Rp35.000</p>
+                <button class="px-4 py-2 mt-2 font-semibold text-white bg-yellow-600 rounded-3xl hover:bg-yellow-700">Order</button>
+            </div>
+            <div class="flex flex-col items-center p-4 transition duration-300 rounded-lg">
+                <img src="images/roasted-chicken.png" alt="Nasi Goreng" class="w-[290px] mb-4 transition duration-300 transform rounded-lg hover:scale-105">
+                <h2 class="mb-2 text-xl font-bold name">Chicken Roasted with Fresh Herbs</h2>
+                <p class="font-bold text-red-500">Rp95.000</p>
+                <button class="px-4 py-2 mt-2 font-semibold text-white bg-yellow-600 rounded-3xl hover:bg-yellow-700">Order</button>
+            </div>
+            <div class="flex flex-col items-center p-4 transition duration-300 rounded-lg">
+                <img src="images/udang-sop.png" alt="Nasi Goreng" class="w-[290px] mb-4 transition duration-300 transform rounded-lg hover:scale-105">
+                <h2 class="mb-2 text-xl font-bold name">Sup Udang</h2>
+                <p class="font-bold text-red-500">Rp75.000</p>
+                <button class="px-4 py-2 mt-2 font-semibold text-white bg-yellow-600 rounded-3xl hover:bg-yellow-700">Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Minuman -->
+    <div class="container p-6 pt-24 pb-24 mx-auto bg-gradient-to-b from-white to-orange-100" id="menu">
+        <h1 class="mb-8 text-3xl font-bold text-center text-yellow-600" style="font-family: 'Patrick Hand', cursive;">Minuman</h1>
+        <div class="grid grid-cols-1 gap-4 mx-4 sm:grid-cols-2 md:grid-cols-3 sm:mx-8 md:mx-40">
+            <div class="relative flex flex-col items-center p-4 transition duration-300 rounded-lg">
+                <img src="images/iced-tea.png" alt="Nasi Goreng" class="w-[290px] mb-4 transition duration-300 transform rounded-lg hover:scale-105">
+                <h2 class="mb-2 text-xl font-bold name">Iced Tea</h2>
+                <p class="font-bold text-red-500">Rp19.000</p>
+                <button class="px-4 py-2 mt-2 font-semibold text-white bg-yellow-600 rounded-3xl hover:bg-yellow-700">Order</button>
+            </div>
+            
+            <div class="relative flex flex-col items-center p-4 transition duration-300 rounded-lg">
+                <img src="images/choco.png" alt="Nasi Goreng" class="w-[290px] mb-4 transition duration-300 transform rounded-lg hover:scale-105">
+                <h2 class="mb-2 text-xl font-bold name">Choco Dessert</h2>
+                <p class="font-bold text-red-500">Rp22.000</p>
+                <button class="px-4 py-2 mt-2 font-semibold text-white bg-yellow-600 rounded-3xl hover:bg-yellow-700">Order</button>
+            </div>
+            
+            <div class="relative flex flex-col items-center p-4 transition duration-300 rounded-lg">
+                <img src="images/oreo.png" alt="Nasi Goreng" class="w-[290px] mb-4 transition duration-300 transform rounded-lg hover:scale-105">
+                <h2 class="mb-2 text-xl font-bold name">Oreo</h2>
+                <p class="font-bold text-red-500">Rp22.000</p>
+                <button class="px-4 py-2 mt-2 font-semibold text-white bg-yellow-600 rounded-3xl hover:bg-yellow-700">Order</button>
+            </div>  
+        </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="container p-1 mx-auto bg-gradient-to-t from-white to-orange-100">
+        <div class="grid-container">
+            <div class="grid-item grid-item-1">
+                <img src="images/cold-latte.jpg" alt="Coffee Image 1" class="object-cover w-full h-full">
+            </div>
+            <div class="grid-item">
+                <img src="images/2.jpg" alt="Coffee Image 2" class="object-cover w-full h-full">
+            </div>
+            <div class="grid-item">
+                <img src="images/nasi.jpg" alt="Coffee Image 3" class="object-cover w-full h-full">
+            </div>
+            <div class="grid-item">
+                <img src="images/5.jpg" alt="Coffee Image 4" class="object-cover w-full h-full">
+            </div>
+            <div class="grid-item">
+                <img src="images/7.jpg" alt="Coffee Image 5" class="object-cover w-full h-full">
+            </div>
+        </div>
+    </div>
+
+    <!-- Maps -->
+    <div class="relative w-full h-96">
+        <iframe 
+            class="absolute inset-0 w-full h-full border-0" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31721.72653631831!2d106.82055341520918!3d-6.438975908768711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e8ad9bc5d74f%3A0x8df138d5e1455b55!2sTapos%2C%20Kota%20Depok%2C%20Jawa%20Barat!5e0!3m2!1sen!2sid!4v1624459248215!5m2!1sen!2sid"
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>    
+
+    <!-- Footer -->
+    <footer class="px-10 py-20 text-white bg-gray-800">
+        <div class="max-w-6xl px-4 mx-auto">
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2">
+                    <div class="mb-4">
+                        <h1 class="text-3xl font-semibold">Pul's Cafe</h1>
+                    </div>
+                    <div>
+                        <ul class="flex space-x-4">
+                            <li><a href="#" class="hover:underline">Home</a></li>
+                            <li><a href="#about" class="hover:underline">About Us</a></li>
+                            <li><a href="#menu" class="hover:underline">Menu</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full mt-8 md:w-1/2 md:mt-0">
+                    <h2 class="text-xl font-semibold">CONTACT US</h2>
+                    <br>
+                    <p>Jalan Raya Tapos, Kecamatan Tapos, Kelurahan Cimpaeun, Depok, Jawa Barat (71279)</p>
+                    <p>Phone: 0813 1566 9406</p>
+                    <p>Email: <a href="mailto:syaifulmuhammad02@gmail.com" class="text-yellow-500 hover:underline">syaifulmuhammad02@gmail.com</a></p>
+                    <p>Website: <a href="https://ifulrahman.github.io" class="text-yellow-500 hover:underline">ifulrahman.github.io</a></p>
+                </div>
+            </div>
+            <div class="pt-4 mt-8 text-center border-t border-gray-700">
+                <p>© Copyright 2024 Pul's Cafe | Muhammad Syaiful Rahman. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+      // -------------------------------------------------------------------------
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.querySelector('nav');
+        const threshold = navbar.offsetHeight; 
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > threshold) {
+                navbar.classList.remove('transparent');
+                navbar.classList.add('solid');
+            } else {
+                navbar.classList.remove('solid');
+                navbar.classList.add('transparent');
+            }
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pul's Cafe</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        scroll-behavior: smooth;
+    }
+    
+    .parallax {
+        background-image: url('images/2.jpg');
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .transparent {
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    .solid {
+        background-color: white;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    }
+
+    .menu-item {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-item img {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .name {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    .parallax-2 {
+      background-image: url('images/ayam-panggang.jpg');
+      min-height: 500px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+</style>
+<body class="bg-white font-poppins">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 z-50 w-full bg-white transparent">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <img class="w-12 h-12" src="images/logo.png" alt="Logo">
+                    <span class="ml-2 font-semibold text-gray-700 text-md">Pul's Cafe</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-baseline ml-10 space-x-4">
+                        <a href="#home" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-yellow-600">Home</a>
+                        <a href="#about" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-yellow-600">About</a>
+                        <a href="#maps" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-yellow-600">Location</a>
+                        <a href="menu.html" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-yellow-600">Menu</a>
+                    </div>
+                </div>
+                <div class="flex -mr-2 md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 text-gray-700 rounded-md hover:text-gray-900 focus:outline-none">
+                        <svg class="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-yellow-600">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-yellow-600">About</a>
+                <a href="#maps" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-yellow-600">Location</a>
+                <a href="menu.html" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-yellow-600">Menu</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="flex items-center justify-center parallax">
+        <div class="text-center text-white">
+            <h1 class="mb-6 text-5xl font-bold">Welcome to Pul's Cafe</h1>
+            <a href="#about" class="inline-block px-6 py-3 mt-4 font-bold text-white transition duration-300 bg-yellow-600 rounded-lg hover:bg-gray-900">Begin</a>
+        </div>
+    </header>
+    
+    <!-- About -->
+    <section id="about" class="py-16 bg-white">
+        <div class="flex flex-col items-center px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 md:flex-row">
+          <div class="mb-8 text-center md:w-1/2 md:mb-0 md:pr-8 md:text-left">
+            <h2 class="mb-4 text-sm font-bold">Read Our Story</h2>
+            <h2 class="mb-4 text-3xl font-bold text-yellow-600">Tentang Kami</h2>
+            <p class="text-lg italic text-gray-700">Kami Sudah Berpengalaman Membuat Hidangan khas Cafe sejak 1999</p>
+            <p class="mt-4 text-gray-600">
+                Selamat datang di tempat yang mengundang untuk menikmati kelezatan hidangan yang dipenuhi cinta dan kopi yang membangunkan semangat. Di sini, setiap tegukan membawa cerita, dan setiap gigitan adalah perjalanan rasa yang menggetarkan.
+            </p>
+          </div>
+          <div class="md:w-1/2">
+            <img src="images/5.jpg" alt="Cafe Story" class="w-full h-auto shadow-md rounded-3xl"> 
+          </div>
+        </div>
+      </section>
+
+    <!-- Highlights -->
+    <section class="py-16 bg-gradient-to-br from-gray-100 to-orange-100">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 text-center sm:grid-cols-2 md:grid-cols-4">
+                <div>
+                    <img src="images/coffee.png" alt="Kopi berkualitas dengan berbagai variasi biji kopi" class="object-cover w-full h-48 mb-2 rounded-md">
+                    <h3 class="mb-2 text-lg italic font-semibold text-yellow-600">Kopi berkualitas dengan berbagai variasi biji kopi</h3>
+                </div>
+                <div>
+                    <img src="images/coffee-2.png" alt="Pilihan kopi dan pastry yang lezat" class="object-cover w-full h-48 mb-2 rounded-md">
+                    <h3 class="mb-2 text-lg italic font-semibold text-yellow-600">Pilihan kopi dan pastry yang lezat</h3>
+                </div>
+                <div>
+                    <img src="images/coffee-3.png" alt="Tersedia kopi untuk dibawa pulang" class="object-cover w-full h-48 mb-2 rounded-md">
+                    <h3 class="mb-2 text-lg italic font-semibold text-yellow-600">Tersedia kopi untuk dibawa pulang</h3>
+                </div>
+                <div>
+                    <img src="images/coffee-4.png" alt="Jaminan rasa yang enak (Mantul Mantap Betul)" class="object-cover w-full h-48 mb-2 rounded-md">
+                    <h3 class="mb-2 text-lg italic font-semibold text-yellow-600">Jaminan rasa yang enak (Mantul Mantap Betul)</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlight -->
+      <section id="menu" class="p-4 mx-auto max-w-7xl mb-36">
+        <h2 class="mt-8 mb-2 text-3xl font-bold text-center text-yellow-600">Our Menu</h2>
+        <h2 class="mt-2 mb-16 text-sm italic text-center">"Hidangan Penuh Kenikmatan yang Siap Memenuhi Kebutuhan Anda"</h2>
+        <div class="grid grid-cols-1 gap-0 sm:grid-cols-2 md:grid-cols-3">
+          <div class="menu-item">
+            <img src="images/nasi.jpg" alt="Menu Item 1" class="object-cover w-full h-full">
+            <div class="absolute inset-0 flex flex-col justify-end p-4 transition-opacity opacity-0 bg-gradient-to-t from-black to-transparent hover:opacity-100">
+              <h3 class="font-bold text-white name">Nasi Goreng</h3>
+              <p class="text-white price">Rp26.000</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="images/mie.jpg" alt="Menu Item 1" class="object-cover w-full h-full">
+            <div class="absolute inset-0 flex flex-col justify-end p-4 transition-opacity opacity-0 bg-gradient-to-t from-black to-transparent hover:opacity-100">
+              <div class="font-bold text-white name">Mie Goreng</div>
+              <div class="text-white price">Rp24.000</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="images/2.jpg" alt="Menu Item 3" class="object-cover w-full h-full">
+            <div class="absolute inset-0 flex flex-col justify-end p-4 transition-opacity opacity-0 bg-gradient-to-t from-black to-transparent hover:opacity-100">
+              <div class="font-bold text-white name">Paket Cafe (Kopi + Roti)</div>
+              <div class="text-white price">Rp35.000</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="images/ayam-panggang.jpg" alt="Menu Item 4" class="object-cover w-full h-full">
+            <div class="absolute inset-0 flex flex-col justify-end p-4 transition-opacity opacity-0 bg-gradient-to-t from-black to-transparent hover:opacity-100">
+              <div class="font-bold text-white name">Ayam Panggang Jumbo</div>
+              <div class="text-white price">Rp360.000</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="images/kentang.jpg" alt="Menu Item 5" class="object-cover w-full h-full">
+            <div class="absolute inset-0 flex flex-col justify-end p-4 transition-opacity opacity-0 bg-gradient-to-t from-black to-transparent hover:opacity-100">
+              <div class="font-bold text-white name">Paket Kentang</div>
+              <div class="text-white price">Rp40.000</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="images/cold-latte.jpg" alt="Menu Item 6" class="object-cover w-full h-full">
+            <div class="absolute inset-0 flex flex-col justify-end p-4 transition-opacity opacity-0 bg-gradient-to-t from-black to-transparent hover:opacity-100">
+              <div class="font-bold text-white name">Cold Latte</div>
+              <div class="text-white price">Rp20.000</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- Promo -->
+      <section class="flex flex-col items-center p-8 shadow-lg bg-gradient-to-br from-yellow-300 to-orange-200 md:flex-row md:items-start md:justify-center">
+        <div class="w-full pr-11 md:w-1/3 pt-11">
+            <img src="images/promo-2.png" alt="Roasted Chicken" class="w-full h-auto rounded-lg">
+        </div>
+        
+        <div class="w-full p-4 text-center md:w-1/3 md:text-left">
+            <h2 class="mb-4 text-2xl font-bold text-yellow-800 md:text-3xl">Promo Ayam Panggang</h2>
+            <p class="mb-2 text-sm text-gray-700">Nikmati Ayam Panggang spesial kami dengan harga terjangkau!</p>
+            <p class="mb-2 text-sm font-extrabold text-gray-700">Hanya Rp55.000,00 per porsi.</p>
+            <p class="mb-2 text-sm text-gray-700">Gratis minuman segar untuk setiap pembelian dua porsi.</p>
+            <p class="mb-4 text-sm text-gray-700">Promo berlaku hingga akhir bulan ini. Jangan sampai ketinggalan!</p>
+            <div class="inline-block px-4 py-2 mb-4 text-white bg-red-700 rounded font-extralight" id="countdown">
+                Flash Sale! Promo akan habis dalam: <br><span id="timer" class="font-bold text-red-200"></span>
+            </div>
+            <a href="menu.html">
+              <button class="px-4 py-2 font-bold text-white bg-yellow-600 rounded hover:bg-yellow-700">
+                Pesan Sekarang
+              </button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Highlight Parallax -->
+    <section class="flex items-center justify-center text-center parallax-2">
+        <div class="p-8 bg-black bg-opacity-50 rounded-md">
+          <h1 class="mb-4 text-4xl font-bold text-white md:text-4xl">Nikmati harimu dengan Pul's Cafe</h1>
+          <p class="text-lg text-white md:text-xl">Tempat sempurna untuk menikmati secangkir kopi dan memulai harimu dengan semangat.</p>
+        </div>
+      </section>
+
+    <!-- Contact -->
+      <section class="flex flex-col items-center p-8 bg-white rounded-lg mb-11 mt-11 md:flex-row md:justify-around">
+        <div class="flex flex-col items-center p-4 ml-0 text-center md:items-start md:w-1/3 md:text-left lg:ml-36">
+          <h2 class="mb-4 text-[16px] font-bold text-gray-800">Alamat Cafe.</h2>
+          <p class="mb-2 text-[16px] text-gray-700">Jalan Raya Tapos, Kecamatan Tapos, Kelurahan Cimpaeun, Depok, Jawa Barat (71279)</p>
+        </div>
+    
+        <div class="flex justify-center w-full p-4 md:w-1/3">
+          <img src="images/contact.png" alt="Cafe Address" class="w-3/4 h-auto rounded-lg">
+        </div>
+    
+        <div class="flex flex-col items-center p-4 text-center md:items-start md:w-1/3 md:text-left">
+          <div class="text-[16px] text-gray-800">
+            <p class="mb-2"><span class="font-semibold">Jam Operasional:</span></p>
+            <p class="mb-2">Senin - Jumat // 09:00 - 18:00 WIB</p>
+            <p class="mb-2">Sabtu // 10:00 - 01:00 WIB</p>
+            <p class="mb-2">Minggu // TUTUP</p>
+            <br><br>
+            <p class="mb-4 font-semibold">Nomor Reservasi:</p>
+            <p class="mb-2"><span class="font-bold">📞</span> +(628)-13-1566-9406 <br>(Muhammad Syaiful Rahman)</p>
+          </div>
+        </div>
+      </section>
+
+    <!-- Maps -->
+    <div id="maps" class="relative w-full h-96">
+      <iframe 
+          class="absolute inset-0 w-full h-full border-0" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31721.72653631831!2d106.82055341520918!3d-6.438975908768711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e8ad9bc5d74f%3A0x8df138d5e1455b55!2sTapos%2C%20Kota%20Depok%2C%20Jawa%20Barat!5e0!3m2!1sen!2sid!4v1624459248215!5m2!1sen!2sid"
+          allowfullscreen="" 
+          loading="lazy">
+      </iframe>
+    </div>   
+
+    <!-- Footer -->
+    <footer class="px-10 py-20 text-white bg-gray-800">
+        <div class="max-w-6xl px-4 mx-auto">
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2">
+                    <div class="mb-4">
+                        <h1 class="text-3xl font-semibold">Pul's Cafe</h1>
+                    </div>
+                    <div>
+                        <ul class="flex space-x-4">
+                            <li><a href="#" class="hover:underline">Home</a></li>
+                            <li><a href="#about" class="hover:underline">About Us</a></li>
+                            <li><a href="#menu" class="hover:underline">Menu</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full mt-8 md:w-1/2 md:mt-0">
+                    <h2 class="text-xl font-semibold">CONTACT US</h2>
+                    <br>
+                    <p>Jalan Raya Tapos, Kecamatan Tapos, Kelurahan Cimpaeun, Depok, Jawa Barat (71279)</p>
+                    <p>Phone: 0813 1566 9406</p>
+                    <p>Email: <a href="mailto:syaifulmuhammad02@gmail.com" class="text-yellow-500 hover:underline">syaifulmuhammad02@gmail.com</a></p>
+                    <p>Website: <a href="https://ifulrahman.github.io" class="text-yellow-500 hover:underline">ifulrahman.github.io</a></p>
+                </div>
+            </div>
+            <div class="pt-4 mt-8 text-center border-t border-gray-700">
+                <p>© Copyright 2024 Pul's Cafe | Muhammad Syaiful Rahman. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JAVASCRIPT -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+      // ----------------------------------------------------------------------
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.querySelector('nav');
+        const threshold = navbar.offsetHeight; 
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > threshold) {
+                navbar.classList.remove('transparent');
+                navbar.classList.add('solid');
+            } else {
+                navbar.classList.remove('solid');
+                navbar.classList.add('transparent');
+            }
+        });
+    });
+
+    // ----------------------------------------------------------------------
+
+        var countDownDate = new Date();
+        countDownDate.setDate(countDownDate.getDate() + 5);
+      
+        var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+
+    </script>
+</body>
+</html>
